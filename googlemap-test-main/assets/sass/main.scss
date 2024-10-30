@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400&subset=cyrillic-ext');
+@import "variables.scss";
+@import "spinner.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body, input, button {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: $font-light;
+}
+body {
+	background: $blue;
+	padding: 0;
+}
+
+.search {
+	&__form {
+		max-width: 600px;
+		margin: auto;
+		position: relative;
+		padding: 15px 22px 15px 10px;
+	}
+	&__buttons {
+		position: absolute;
+		z-index: 10;
+		right: 10px;
+		bottom: 30px;
+	}
+	&__button {
+		font-size: 14px;
+		float: left;
+		cursor: pointer;
+		background: #ebebeb;
+		border-radius: $radius;
+		border: 1px solid #999;
+		outline: none;
+		margin-left: 10px;
+		padding: 10px 20px;
+		&:first-of-type {
+			margin-left: 0;
+		}
+	}
+	&__label {
+		display: none;
+	}
+	&__input {
+		height: 30px;
+		width: 100%;
+		font-size: 15px;
+		background: #fff;
+		border: none;
+		outline: none;
+		border-radius: $radius;
+		padding: 5px;
+	}
+	&__submit {
+		height: 34px;
+		width: 34px;
+		position: absolute;
+		right: 15px;
+		top: 18px;
+		background: #ebebeb;
+		border-radius: $radius;
+		border: none;
+		outline: none;
+	}
+	&__results {
+		max-height: 300px;
+		font-size: .9em;
+		position: absolute;
+		z-index: 2;
+		left: 10px;
+		top: 52px;
+		right: 12px;
+		overflow-y: auto;
+	}
+	&__item {
+		cursor: pointer;
+		margin-bottom: 1px;
+		background: rgba(255, 255, 255, .9);
+		padding: 5px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__details {
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		bottom: 10px;
+		right: 0;
+		padding: 10px;
+		&-bg {
+			display: inline-block;
+			background: rgba(255, 255, 255, .9);
+			padding: 10px;
+		}
+		p {
+			font-size: .85em;
+			padding-top: 5px;
+			&:first-of-type {
+				padding-top: 10px;
+			}
+		}
+	}
+	&__map {
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 70px;
+		right: 0;
+		bottom: 10px;
+		background: #fff;
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+	}
+}
+.sr-only {
+	display: none;
+}
